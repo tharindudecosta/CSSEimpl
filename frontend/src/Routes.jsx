@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes as AppRoutes, Route } from "react-router-dom";
 import {
-  Home,
   AddContructionSite,
   AddManager,
   AddProducts,
@@ -9,9 +8,10 @@ import {
   AddSuppliers,
   ApprovedDeliveryAdvice,
   ApprovedOrders,
-  DeclinedOrders,
   ContructionSites,
+  DeclinedOrders,
   DraftsDeliveryAdvice,
+  Home,
   ManagerLogin,
   ManagerQuotations,
   Managers,
@@ -24,7 +24,7 @@ import {
   SiteMangerLogin,
   StaffLogin,
   SupplierLogin,
-  Suppliers,
+  Suppliers
 } from "./modules";
 
 const Routes = () => {

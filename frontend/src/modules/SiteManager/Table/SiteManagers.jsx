@@ -25,14 +25,14 @@ const SiteManagers = () => {
     <AdminLayout>
       <div className="dark:bg-gray-900 h-full p-10 overflow-x-auto">
         <div className="flex justify-end gap-2">
-          <Link to="/sitemanagers/new">
+          {/* <Link to="/sitemanagers/new">
             <button
               type="button"
               class="h-10 focus:outline-none text-white bg-[#ffb300] hover:bg-orange-600  font-medium rounded text-sm px-5 py-2.5"
             >
               Add a Site Manager
             </button>
-          </Link>
+          </Link> */}
         </div>
         <h2 class="text-2xl text-gray-900 my-4 font-extrabold font-primary dark:text-white">
           Site Managers

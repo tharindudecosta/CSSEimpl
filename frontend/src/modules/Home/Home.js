@@ -12,7 +12,7 @@ const Home = () => {
       </div>{" "}
       <div>
         <div
-          className="tiles-common vision-test-tile"
+          className="tiles-common admin-tile"
           onClick={() => {
             navigate("/staff/login");
           }}
@@ -23,7 +23,7 @@ const Home = () => {
         </div>
 
         <div
-          className="tiles-common training-tile"
+          className="tiles-common supplier-tile"
           onClick={() => {
             navigate("/supplier/login");
           }}
@@ -34,7 +34,7 @@ const Home = () => {
         </div>
 
         <div
-          className="tiles-common doctor-user-tile"
+          className="tiles-common manager-tile"
           onClick={() => {
             navigate("/manager/login");
           }}
@@ -45,7 +45,7 @@ const Home = () => {
         </div>        
         
         <div
-          className="tiles-common doctor-tile"
+          className="tiles-common site-manager-tile"
           onClick={() => {
             navigate("/sitemanager/login");
           }}

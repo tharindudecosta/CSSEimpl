@@ -29,17 +29,17 @@
 }
 
 /* home page */
-.vision-test-tile {
+.admin-tile {
   background-color: #1f2937;
   /* width: 42%; */
 }
-.training-tile {
+.supplier-tile {
   background-color: #2b3644;
 }
-.doctor-tile {
+.site-manager-tile {
   background-color: #444b55;
 }
-.doctor-user-tile {
+.manager-tile {
   background-color: #414a57;
 }
 .spec-user-tile {

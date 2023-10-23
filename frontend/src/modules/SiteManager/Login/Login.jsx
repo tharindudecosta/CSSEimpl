@@ -8,13 +8,10 @@ import { useGlobalState } from "../../../utils";
 import {
   LOGIN,
   LOGINSITEMANAGER,
-  LOGIN_MANAGER,
   LOGIN_SUCCCESSFUL,
-  MANAGER,
   MANAGERS,
   SITEMANAGER,
-  SUCCESS,
-  SUPPLIERLOGIN,
+  SUCCESS
 } from "../../../utils/string";
 
 const Login = () => {

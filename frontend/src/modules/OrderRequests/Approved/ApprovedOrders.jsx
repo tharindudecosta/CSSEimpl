@@ -1,9 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
-import Swal from "sweetalert2";
 
 import { axiosclient } from "../../../api";
 import { AdminLayout } from "../../../layouts";

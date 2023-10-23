@@ -53,11 +53,11 @@ const Navbar = () => {
         }`}
       >
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          {/* <Link to="/" className="flex"> */}
+          <Link to="/" className="flex">
           <span className="self-center text-white text-xl font-semibold whitespace-nowrap dark:text-white">
             Industry
           </span>
-          {/* </Link> */}
+          </Link>
 
           <div className="flex gap-4 items-center md:order-2">
             {isUser && (
