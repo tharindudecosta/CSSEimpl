@@ -12,7 +12,12 @@ const ContructionSiteSchema = new mongoose.Schema({
   },
   siteManager: {
     type: String,
-  }
+  },
+  customId: {
+    type: String,
+    unique: true,
+    default:null
+  },
 });
 
 const ContructionSite = mongoose.model("ContructionSite", ContructionSiteSchema);

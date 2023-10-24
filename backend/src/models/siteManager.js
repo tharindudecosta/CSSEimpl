@@ -13,6 +13,10 @@ const SiteManagerSchema = new mongoose.Schema({
   password: {
     type: String,
   },
+  customId: {
+    type: String,
+    unique: true
+  },
 });
 
 const SiteManager = mongoose.model("SiteManager", SiteManagerSchema);

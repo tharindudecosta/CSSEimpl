@@ -10,12 +10,19 @@ import {
 } from "./supplierController.js";
 
 // import { createDepartment, getDepartments } from "./departmentController.js";
-import {createContructionSite,getContructionSites} from './ContructionSiteController.js'
+import {
+  createContructionSite,
+  getContructionSites,
+  updateContructionSite,
+  deleteContructionSite,
+} from "./ContructionSiteController.js";
 
 import {
   createSiteManager,
   loginSiteManager,
   getSiteMangers,
+  deleteSiteManager,
+  updateSiteManager,
 } from "./siteManagerController.js";
 
 import { createOrderRequest } from "./siteManagerController.js";
@@ -28,6 +35,8 @@ import {
   declineRequest,
   getUnApprovedProducts,
   approveQuotations,
+  deleteManager,
+  updateManager,
 } from "./managerController.js";
 
 import {
@@ -61,16 +70,18 @@ export {
   placedOrders,
   placeSupplierQuotation,
 
-  // Departmetns
-  // createDepartment,
-  // getDepartments,
+  // constructionSites
   createContructionSite,
   getContructionSites,
+  updateContructionSite,
+  deleteContructionSite,
 
   // SiteMangers
   createSiteManager,
   loginSiteManager,
   getSiteMangers,
+  deleteSiteManager,
+  updateSiteManager,
 
   // Manager
   createManager,
@@ -80,6 +91,8 @@ export {
   declineRequest,
   getUnApprovedProducts,
   approveQuotations,
+  deleteManager,
+  updateManager,
 
   // OrderRequest
   createOrderRequest,

@@ -17,6 +17,10 @@ const ManagerSchema = new mongoose.Schema({
   password: {
     type: String,
   },
+  customId: {
+    type: String,
+    unique: true,
+  },
 });
 
 const Manager = mongoose.model("Manager", ManagerSchema);

@@ -1,13 +1,14 @@
 import { OrderRequest, SiteManager } from "../models/index.js";
 
 const createSiteManager = (req, res) => {
-  const { employeeName, contactNumber, email, password } = req.body;
+  const { employeeName, contactNumber, email, password,customId } = req.body;
 
   const siteManager = new SiteManager({
-    employeeName,
-    contactNumber,
-    email,
-    password,
+    employeeName:employeeName,
+    contactNumber:contactNumber,
+    email:email,
+    password:password,
+    customId:customId
   });
 
   SiteManager.create(siteManager, (err, data) => {
@@ -55,9 +56,40 @@ const createOrderRequest = (req, res) => {
   });
 };
 
+const deleteSiteManager =  (req, res)=>{
+
+  const {customId} = req.params
+  
+  SiteManager.findOneAndDelete({customId:customId}, (err, data) => {
+    if (err) res.status(500).json({ error: err });
+    res.status(201).json(data);
+  });
+
+}
+
+const updateSiteManager = (req, res) => {
+  const { employeeName, newContactNumber, newEmail, password,customId } = req.body;
+
+  const siteManager = new SiteManager({
+    employeeName:employeeName,
+    contactNumber:newContactNumber,
+    email:newEmail,
+    password:password,
+    customId:customId
+  });
+
+  SiteManager.updateOne({customId:customId},{siteManager}, (err, data) => {
+    if (err) res.status(500).json({ error: err });
+    res.status(201).json(data);
+  });
+};
+
+
 export {
   createSiteManager,
   loginSiteManager,
   createOrderRequest,
   getSiteMangers,
+  deleteSiteManager,
+  updateSiteManager
 };

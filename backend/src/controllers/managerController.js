@@ -1,7 +1,8 @@
 import { Manager, OrderRequest, Product } from "../models/index.js";
 
 const createManager = (req, res) => {
-  const { manName,department, contactNumber, email, password } = req.body;
+  const { manName, department, contactNumber, email, password, customId } =
+    req.body;
 
   const manager = new Manager({
     manName,
@@ -9,6 +10,7 @@ const createManager = (req, res) => {
     contactNumber,
     email,
     password,
+    customId,
   });
 
   Manager.create(manager, (err, data) => {
@@ -103,6 +105,34 @@ const getUnApprovedProducts = (req, res) => {
   });
 };
 
+const deleteManager = (req, res) => {
+  const { customId } = req.params;
+
+  Manager.findOneAndDelete({ customId: customId }, (err, data) => {
+    if (err) res.status(500).json({ error: err });
+    res.status(201).json(data);
+  });
+};
+
+const updateManager = (req, res) => {
+  const { manName, department, contactNumber, email, password, customId } =
+    req.body;
+
+  const newManager = new Manager({
+    manName: manName,
+    department: department,
+    contactNumber: contactNumber,
+    email: email,
+    password: password,
+    customId: customId,
+  });
+
+  Manager.updateOne({ customId: customId }, { newManager }, (err, data) => {
+    if (err) res.status(500).json({ error: err });
+    res.status(201).json(data);
+  });
+};
+
 export {
   createManager,
   loginManager,
@@ -111,4 +141,6 @@ export {
   getManagers,
   approveQuotations,
   getUnApprovedProducts,
+  deleteManager,
+  updateManager,
 };

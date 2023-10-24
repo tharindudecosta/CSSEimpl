@@ -1,5 +1,5 @@
 {
-  "name": "soul-travel",
+  "name": "CSSE",
   "version": "1.0.0",
   "description": "Node REST API for CSSE",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "dev": "nodemon index.js",
     "test": "jest --watchAll"
   },
-  "author": "Soul Travel Team",
+  "author": "CSSE Team",
   "license": "ISC",
   "devDependencies": {
     "jest": "^27.2.4",

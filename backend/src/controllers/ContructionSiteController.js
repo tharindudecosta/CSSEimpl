@@ -42,4 +42,41 @@ const getContructionSites = (req, res) => {
   });
 };
 
-export { createContructionSite, getContructionSites };
+const deleteContructionSite = (req, res) => {
+  const { customId } = req.params;
+
+  ContructionSite.findOneAndDelete({ customId: customId }, (err, data) => {
+    if (err) res.status(500).json({ error: err });
+    res.status(201).json(data);
+  });
+};
+
+const updateContructionSite = (req, res) => {
+  const {
+    contructionSiteName,
+    contructionSiteAddress,
+    contructionSiteBudget,
+    contructionSiteManager,
+    customId,
+  } = req.body;
+
+  const site = new ContructionSite({
+    siteName: contructionSiteName,
+    siteAddress: contructionSiteAddress,
+    siteBudjet: contructionSiteBudget,
+    siteManager: contructionSiteManager,
+    customId: customId,
+  });
+
+  ContructionSite.updateOne({ customId: customId }, { site }, (err, data) => {
+    if (err) res.status(500).json({ error: err });
+    res.status(201).json(data);
+  });
+};
+
+export {
+  createContructionSite,
+  getContructionSites,
+  updateContructionSite,
+  deleteContructionSite,
+};
